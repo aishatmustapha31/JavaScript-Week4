@@ -38,6 +38,57 @@ function sortByLName(){
 
 }
 
+
+function sortByAge(){
+    students.sort((a,b)=>{
+        return a.age - b.age
+    })
+    
+
+    studentData = generateStudentData()
+    studentTableBody.innerHTML = studentData.join(" ")
+
+}
+
+
+function sortByAllowance(){
+
+
+    students.sort((a,b)=>{
+        return a.allowance - b.allowance
+    })
+
+    studentData = generateStudentData()
+    studentTableBody.innerHTML = studentData.join(" ")
+
+}
+
+
+function sortByGender(){
+
+
+    students.sort((a,b)=>{
+        return a.gender.localeCompare(b.gender)
+    })
+
+    studentData = generateStudentData()
+    studentTableBody.innerHTML = studentData.join(" ")
+
+}
+
+function sortByRegDate(){
+
+
+    students.sort((a,b)=>{
+        return a.regDate.localeCompare(b.regDate)
+    })
+
+    studentData = generateStudentData()
+    studentTableBody.innerHTML = studentData.join(" ")
+
+}
+
+
 function generateStudentData(){
   return  students.map((student)=>{
         let dateOptions= {
